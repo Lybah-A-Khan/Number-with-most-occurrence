@@ -1,0 +1,13 @@
+ #Read integers from input and split into a list
+numbers = input("Enter numbers: ").split()
+# Create a dicTonary to store the count of each number
+count = {}
+# Count the occurrences of each number
+for num in numbers:
+  count[num] = count.get(num, 0) + 1
+# Find the maximum occurrence count
+max_count = max(count.values())
+# Find numbers with maximum occurrences
+most_frequent_numbers = [num for num in count if count[num] == max_count]
+# Print the numbers with maximum occurrences
+print("Numbers with the most occurrences:", ', '.join(most_frequent_numbers))
